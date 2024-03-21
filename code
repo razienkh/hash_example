@@ -1,0 +1,11 @@
+import hashlib
+i=0
+while True:
+  i+=1
+  s='my name is razie and 032332727 is my stdent number'+str(i)
+  m = hashlib.sha256()
+  m.update(s.encode('utf-8'))
+  hash=m.hexdigest()
+  if hash[-4:]=='1111':
+     print(hash,s)
+     break
